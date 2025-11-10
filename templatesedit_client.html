@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Client</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Edit {{ client.company_name }}</h2>
+  <form method="post">
+    <label>Last Contact Date:</label>
+    <input type="date" name="last_contact_date" value="{{ client.last_contact_date }}"><br>
+    <label>Color Code:</label>
+    <input type="color" name="color" value="{{ client.color }}"><br>
+    <button type="submit">Save</button>
+  </form>
+  <a href="/dashboard">Back</a>
+</body>
+</html>
