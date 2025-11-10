@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard | Courtesy Tracker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Courtesy Call Dashboard</h2>
+  <table>
+    <tr>
+      <th>Company</th><th>Last Contact</th><th>Color</th><th>Updated By</th><th>Last Updated</th><th>Action</th>
+    </tr>
+    {% for c in clients %}
+    <tr style="background-color:{{ c.color }}">
+      <td>{{ c.company_name }}</td>
+      <td>{{ c.last_contact_date }}</td>
+      <td>{{ c.color }}</td>
+      <td>{{ c.updated_by }}</td>
+      <td>{{ c.last_updated.strftime('%Y-%m-%d %H:%M') }}</td>
+      <td><a href="/edit/{{ c.id }}">Edit</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/logout">Logout</a>
+</body>
+</html>
