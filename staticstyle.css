@@ -1,0 +1,6 @@
+body { font-family: Segoe UI, sans-serif; background: #f5f8fb; padding: 20px; }
+h2 { color: #001F54; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+th { background: #001F54; color: white; }
+.login-container { max-width: 400px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
